@@ -33,7 +33,18 @@ class TaskController extends Controller
                 'description' => $taskData['description'],
             ]);
         }
-
-        return redirect()->back()->with('success', 'To Do List saved successfully!');
+        $request->validate([
+            'description' => 'required',
+            'category_id' => 'required',
+            // Other validations
+        ]);
+    
+        // Save the task
+        $task = new Task;
+        $task->description = $request->description;
+        $task->category_id = $request->category_id;
+        $task->user_id = auth()->id();  // Assuming user is authenticated
+        $task->save();
+        return response()->json(['message' => 'To Do List saved successfully!']);
     }
 }
