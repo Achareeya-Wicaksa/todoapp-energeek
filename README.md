@@ -1,8 +1,9 @@
 # Todo List Application
 
 ![Todo List Application](public/images/todo-list-banner.png)
+![Todo List Application](public/images/postgre.png)
 
-This is a simple **Todo List** application built using **Laravel**. The application allows users to create and manage their tasks, organized into different categories.
+This is a simple **Todo List** application built using **Laravel** and **Postgre**. The application allows users to create and manage their tasks, organized into different categories.
 
 ## 🌟 Features
 
@@ -17,7 +18,7 @@ This is a simple **Todo List** application built using **Laravel**. The applicat
 - PHP >= 7.3
 - Composer
 - Laravel 8.x
-- MySQL or any other supported database
+- Postgre
 
 ## 🚀 Installation
 
